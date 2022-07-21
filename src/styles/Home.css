@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500;700&family=Montserrat&family=Raleway:ital,wght@0,400;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500;700&family=Montserrat&family=Raleway:ital,wght@0,400;1,800;1,900&family=Roboto&display=swap');
+
+.containerhome {
+    /* background-image: url("../assets/bg-lightn.png"); */
+    background-color: rgb(233, 233, 233);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transition: background-image 200ms ease-in;
+    overflow-y: hidden;
+}
+
+#dark {
+    /* background-image: url("../assets/bg-dark.png"); */
+    background-color: #28292B;
+    /* background-position-y: top; */
+}
+
+.mainnav {
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    transition: all 200ms ease;
+    /* backdrop-filter: blur(10px);
+    box-shadow: inset 0px 5px 30px rgb(195, 195, 195); */
+    background-color: #c8d6e5;
+}
+
+.mainnav> img {
+    margin-left: 30px;
+}
+
+.toggle {
+    margin-right: 30px;
+}
+
+#darknav {
+    background-color: #202123;
+}
+
+.home {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: flex-end;
+    height: calc(100vh - 70px);
+    width: 100%;
+    background-size: cover;
+    /* margin-right: 35px; */
+}
+
+.lefthome {
+    /* flex: 50%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    color: white;
+    margin-left: 30px;
+}
+
+.instructions {
+    display: block;
+    flex-direction: column;
+    background-color: #151515;
+    width: 90%;
+    height: 72vh;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: left;
+    padding: 10px;
+    overflow-y: scroll;
+    box-shadow: 5px 5px 15px #161616;
+}
+
+.instructions a {
+    color: #fa5834;
+}
+
+#instructions-light {
+    background-color: whitesmoke;
+    color: black;
+    box-shadow: 5px 5px 15px #686868;
+}
+
+.righthome {
+    /* flex: 50%; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    height: 100%;
+    margin-right: 50px;
+}
+
+.git-win-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.textcontainer > h1 {
+    text-align: left;
+    background: url("https://media.giphy.com/media/KcnbWfsuFr7JpgowGT/giphy.gif");
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding:  20px 0px;
+    transition: all 200ms ease;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    /* animation: font 3s ease-in-out 0s infinite alternate forwards; */
+}
+
+#textdark {
+    color: black;
+}
+
+.textcontainer > p > code {
+    color: green;
+}
+
+#headingdark {
+    background: url("https://media.giphy.com/media/dAWZiSMbMvObDWP3aA/giphy.gif");
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.code {
+    min-width: auto;
+    background: linear-gradient(to right, rgb(252, 190, 190), rgb(180, 220, 249));
+    /* background-color: #fbe5e5; */
+    color: rgb(0, 0, 0);
+    /* border: 1px solid white; */
+    border-radius: 5px;
+    padding: 2px;
+    white-space: nowrap;
+}
+
+#wrap {
+    white-space: break-spaces;
+}
+
+@media (max-width: 1010px) {
+    .git-win-container {
+        margin-bottom: 20px;
+    }
+
+    .home {
+        flex-direction: column;
+        height: 200vh;
+        /* justify-content: center; */
+        /* align-items: center; */
+    }
+
+    .righthome {
+        width: 100vw;
+        margin-right: 0;
+    }
+
+    .lefthome {
+        margin-left: 5vw;
+        width: 100vw;
+    }
+
+    .textcontainer > h1 {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .mainnav> img {
+        margin-left: 20px;
+    }
+
+    .instructions {
+        margin-inline: 20px;
+        width: auto;
+    }
+}
+
+@media (max-width: 715px) {
+    #wrap {
+        white-space: break-spaces;
+        font-size: 11px;
+    }
+
+    .instructions {
+        font-size: 13px;
+    }
+
+    .code {
+        padding: 1px;
+    }
+}
