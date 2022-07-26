@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/gitgood/static/css/main.0710bb8f.css",
-    "main.js": "/gitgood/static/js/main.c3c20b1d.js",
+    "main.css": "/gitgood/static/css/main.e413f9fa.css",
+    "main.js": "/gitgood/static/js/main.ce7d2975.js",
     "static/media/win11wall.jpg": "/gitgood/static/media/win11wall.31389b05721e38443e57.jpg",
     "static/media/vscode.png": "/gitgood/static/media/vscode.a61dc62c499ed3aeefdc.png",
     "static/media/folderwin.ico": "/gitgood/static/media/folderwin.d6f467783053939a4f9a.ico",
@@ -9,11 +9,11 @@
     "static/media/explorer.ico": "/gitgood/static/media/explorer.0f8f8b6841e76623bc7d.ico",
     "static/media/start.png": "/gitgood/static/media/start.16fe70e384fc319dc857.png",
     "index.html": "/gitgood/index.html",
-    "main.0710bb8f.css.map": "/gitgood/static/css/main.0710bb8f.css.map",
-    "main.c3c20b1d.js.map": "/gitgood/static/js/main.c3c20b1d.js.map"
+    "main.e413f9fa.css.map": "/gitgood/static/css/main.e413f9fa.css.map",
+    "main.ce7d2975.js.map": "/gitgood/static/js/main.ce7d2975.js.map"
   },
   "entrypoints": [
-    "static/css/main.0710bb8f.css",
-    "static/js/main.c3c20b1d.js"
+    "static/css/main.e413f9fa.css",
+    "static/js/main.ce7d2975.js"
   ]
 }
