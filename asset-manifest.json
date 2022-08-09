@@ -1,21 +1,13 @@
 {
   "files": {
-    "main.css": "/gitgood/static/css/main.3b13cff1.css",
-    "main.js": "/gitgood/static/js/main.e1eafacc.js",
-    "static/js/232.dc9f132d.chunk.js": "/gitgood/static/js/232.dc9f132d.chunk.js",
-    "static/media/win11wall.jpg": "/gitgood/static/media/win11wall.31389b05721e38443e57.jpg",
-    "static/media/vscode.png": "/gitgood/static/media/vscode.a61dc62c499ed3aeefdc.png",
-    "static/media/folderwin.ico": "/gitgood/static/media/folderwin.d6f467783053939a4f9a.ico",
-    "static/media/search.ico": "/gitgood/static/media/search.8ba6d0db1705de0fd8a6.ico",
-    "static/media/explorer.ico": "/gitgood/static/media/explorer.0f8f8b6841e76623bc7d.ico",
-    "static/media/start.png": "/gitgood/static/media/start.16fe70e384fc319dc857.png",
-    "index.html": "/gitgood/index.html",
-    "main.3b13cff1.css.map": "/gitgood/static/css/main.3b13cff1.css.map",
-    "main.e1eafacc.js.map": "/gitgood/static/js/main.e1eafacc.js.map",
-    "232.dc9f132d.chunk.js.map": "/gitgood/static/js/232.dc9f132d.chunk.js.map"
+    "main.css": "/cryptozen/static/css/main.877105f6.css",
+    "main.js": "/cryptozen/static/js/main.fc0990c5.js",
+    "index.html": "/cryptozen/index.html",
+    "main.877105f6.css.map": "/cryptozen/static/css/main.877105f6.css.map",
+    "main.fc0990c5.js.map": "/cryptozen/static/js/main.fc0990c5.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b13cff1.css",
-    "static/js/main.e1eafacc.js"
+    "static/css/main.877105f6.css",
+    "static/js/main.fc0990c5.js"
   ]
 }
