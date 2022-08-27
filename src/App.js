@@ -1,6 +1,7 @@
 import "./App.css";
 import Home from "./pages/Home";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import TerminalMobile from "./components/TerminalMobile";
 
 const Modal = ({ setIsModalOpen, password, username }) => {
   const [inputValue, setinputValue] = useState("");
@@ -51,13 +52,33 @@ const Modal = ({ setIsModalOpen, password, username }) => {
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [password, setPassword] = useState("")
+  const [username, setUsername] = useState("")
 
   const appCallback = (homePushedValue) => {
     setIsModalOpen(homePushedValue);
   };
 
-  const username = "griffinStewie69";
-  const password = "loisMustDie";
+  const userPass = [
+    ["bingChandler", "tripleNipple"],
+    ["williamButcher", "thisIsDiabolical"],
+    ["scottMichael", "littleKidLover"],
+    ["tribbianiJoey", "howYouDoin"],
+    ["schruteDwight", "bearsEatBeets"],
+    ["homelander", "theRealHeroes"],
+    ["snowJon", "iDunWannit"],
+  ]
+
+  const getUserPass = (arr) => {
+    let random = Math.floor(Math.random() * arr.length);
+    return arr[random]
+  }
+
+  useEffect(() => {
+    let array = getUserPass(userPass)
+    setUsername(array[0])
+    setPassword(array[1])
+  }, [])
 
   return (
     <div className="App">
@@ -68,7 +89,17 @@ function App() {
           username={username}
         />
       ) : null}
+      <p className="para">
+                  Hey, buddy! Are you trying to access this website on a phone?
+                  How many times have you seen an actual dev using git on their
+                  phone? Please, open it on a desktop. But hey, I'm generous,
+                  and I didn't want the phone dwellers to go away with nothing.
+                  So, go ahead and run{" "}
+                  <code style={{ color: "green" }}>gg.resources</code> for some amazing git resources.
+                </p>
+                <TerminalMobile className="termapp"/>
       <Home
+        className="homeApp"
         appCallback={appCallback}
         setIsModalOpen={setIsModalOpen}
         password={password}

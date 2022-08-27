@@ -8,6 +8,7 @@ import logoDark from "../assets/logodark.png";
 import { useState, createContext, useCallback } from "react";
 import DarkModeToggle from "react-dark-mode-toggle";
 import { TerminalContextProvider } from "react-terminal";
+import HeroSection from "../components/HeroSection";
 
 export const DarkContext = createContext(null);
 
@@ -22,6 +23,7 @@ function Home({ appCallback, setIsModalOpen, username, password }) {
   const callback = (pushedvalue) => {
     setIsPushedHome(pushedvalue);
   };
+
   return (
     <>
       <div className="containerhome" id={!darkMode ? "" : "dark"}>
@@ -41,28 +43,22 @@ function Home({ appCallback, setIsModalOpen, username, password }) {
             speed={2.9}
           />
         </nav>
+        <HeroSection darkMode={darkMode} />
         <DarkContext.Provider value={{ darkMode, setDarkMode }}>
-          <div className="home">
+          <div className="home" id={!darkMode ? "" : "homelight"}>
             <div className="lefthome">
               <div className="textcontainer">
-                <h1 id={!darkMode ? "" : "headingdark"}>
-                  Learn to use git, interactively!
-                </h1>
                 <div
                   className="instructions"
                   id={!darkMode ? "instructions-light" : ""}
                 >
-                  Using the command line (scary as it may be) is the industry
-                  standard for version control and collaborating on projects.
-                  That's why I made this. It'll help you get familiar with the
-                  git cli. You'll see how easy it is, right from{" "}
-                  <code style={{ color: "green" }}>git init</code> to{" "}
-                  <code style={{ color: "green" }}>git push</code>. Your
-                  username for GitHub is{" "}
+                  Your username for GitHub is{" "}
                   <code className="code">{username}</code> and the extremely
                   secret password to that is{" "}
                   <code className="code">{password}</code>(remember this, it'll
-                  come in handy later). Let's go!
+                  come in handy later). Make sure you type/copy each command
+                  EXACTLY as it is, punctuations and everything. Let's go!
+                  <br />
                   <br />
                   The very first command you'll wanna execute is{" "}
                   <code className="code">pwd</code> to check the present working
@@ -98,8 +94,8 @@ function Home({ appCallback, setIsModalOpen, username, password }) {
                   <br />
                   Next, run{" "}
                   <code className="code" id="wrap">
-                    git remote add origin
-                    'https://github.com/griffinStewie69/gitgood-repo.git'
+                    git remote add origin 'https://github.com/{username}
+                    /gitgoodrepo.git'
                   </code>
                   <br />
                   This command lets the GitHub servers know exactly which
@@ -149,6 +145,7 @@ function Home({ appCallback, setIsModalOpen, username, password }) {
               </div>
               <TerminalContextProvider>
                 <Terminal
+                  className="terminal"
                   callback={callback}
                   setIsModalOpen={setIsModalOpen}
                   username={username}

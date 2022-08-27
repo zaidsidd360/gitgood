@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
 import "../styles/Git.css";
 import { DarkContext } from "../pages/Home.jsx";
-// import { PushedContext } from "./Terminal";
-// import { pushed } from "./Terminal";
 import {
   LogoGithubIcon,
   MarkGithubIcon,
@@ -16,10 +14,8 @@ import {
 function Git({ isPushedHome, username }) {
   const size = 16;
   const { darkMode } = useContext(DarkContext);
-  // const { isPushed, commitMessage } = useContext(PushedContext);
   return (
     <>
-      {/* <PushedContext.Consumer> */}
       <div className="gitcontainer" id={!darkMode ? "gitlight" : ""}>
         <nav className="gitnav">
           <MarkGithubIcon className="childnav" size={size} fill="white" />
@@ -27,7 +23,7 @@ function Git({ isPushedHome, username }) {
         </nav>
         <div className="gitafternav" id={!darkMode ? "afternavlight" : ""}>
           <RepoIcon className="childafternav" size={size} fill="gray" />
-          <h6 className="childafternav underline">{username} / gitgood-repo</h6>
+          <h6 className="childafternav underline">{username} / gitgoodrepo</h6>
           <p className="childafternav">Public</p>
         </div>
         <div>
@@ -90,7 +86,6 @@ function Git({ isPushedHome, username }) {
           </div>
         </div>
       </div>
-      {/* </PushedContext.Consumer> */}
     </>
   );
 }

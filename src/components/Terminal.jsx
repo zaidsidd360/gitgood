@@ -2,8 +2,6 @@ import React, { useContext, useState, useEffect } from "react";
 import { ReactTerminal } from "react-terminal";
 import "../styles/Terminal.css";
 import { DarkContext } from "../pages/Home.jsx";
-import { motion } from "framer-motion";
-import { RiRefreshLine } from "react-icons/ri";
 import { SocialIcon } from "react-social-icons";
 
 function Terminal({ callback, setIsModalOpen, username }) {
@@ -350,7 +348,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
         }
       } else if (
         text ===
-        "remote add origin 'https://github.com/griffinStewie69/gitgood-repo.git'"
+        `remote add origin 'https://github.com/${username}/gitgoodrepo.git'`
       ) {
         if (gitCmd === "commit") {
           gitCmd = "remote";
@@ -388,8 +386,8 @@ function Terminal({ callback, setIsModalOpen, username }) {
         }
       }
     },
-    griffinStewie69: () => {
-      if (!dollar && username === "griffinStewie69") {
+    bingChandler: () => {
+      if (!dollar && username === "bingChandler") {
         setDollar(true);
         setIsPushed(true);
         setIsModalOpen(true);
@@ -399,10 +397,142 @@ function Terminal({ callback, setIsModalOpen, username }) {
             <br />
             <br />
             <span>
-              Congratulations! Your code is pushed to GitHub successfully. Click
-              on the refresh button at the top right of this terminal
-              &#12304;and run <code style={{ color: "green" }}>clear</code>
-              &#12305; to practice again.
+              Congratulations! Your code is pushed to GitHub successfully. The
+              files you pushed should now be visible in the GitHub window above.
+              Refresh the entire page to practice with a new username and
+              password.
+            </span>
+          </>
+        );
+      } else {
+        return <span style={{ color: "red" }}>Username doesn't exist!</span>;
+      }
+    },
+    scottMichael: () => {
+      if (!dollar && username === "scottMichael") {
+        setDollar(true);
+        setIsPushed(true);
+        setIsModalOpen(true);
+        return (
+          <>
+            <br />
+            <br />
+            <br />
+            <span>
+              Congratulations! Your code is pushed to GitHub successfully. The
+              files you pushed should now be visible in the GitHub window above.
+              Refresh the entire page to practice with a new username and
+              password.
+            </span>
+          </>
+        );
+      } else {
+        return <span style={{ color: "red" }}>Username doesn't exist!</span>;
+      }
+    },
+    williamButcher: () => {
+      if (!dollar && username === "williamButcher") {
+        setDollar(true);
+        setIsPushed(true);
+        setIsModalOpen(true);
+        return (
+          <>
+            <br />
+            <br />
+            <br />
+            <span>
+              Congratulations! Your code is pushed to GitHub successfully. The
+              files you pushed should now be visible in the GitHub window above.
+              Refresh the entire page to practice with a new username and
+              password.
+            </span>
+          </>
+        );
+      } else {
+        return <span style={{ color: "red" }}>Username doesn't exist!</span>;
+      }
+    },
+    tribbianiJoey: () => {
+      if (!dollar && username === "tribbianiJoey") {
+        setDollar(true);
+        setIsPushed(true);
+        setIsModalOpen(true);
+        return (
+          <>
+            <br />
+            <br />
+            <br />
+            <span>
+              Congratulations! Your code is pushed to GitHub successfully. The
+              files you pushed should now be visible in the GitHub window above.
+              Refresh the entire page to practice with a new username and
+              password.
+            </span>
+          </>
+        );
+      } else {
+        return <span style={{ color: "red" }}>Username doesn't exist!</span>;
+      }
+    },
+    schruteDwight: () => {
+      if (!dollar && username === "schruteDwight") {
+        setDollar(true);
+        setIsPushed(true);
+        setIsModalOpen(true);
+        return (
+          <>
+            <br />
+            <br />
+            <br />
+            <span>
+              Congratulations! Your code is pushed to GitHub successfully. The
+              files you pushed should now be visible in the GitHub window above.
+              Refresh the entire page to practice with a new username and
+              password.
+            </span>
+          </>
+        );
+      } else {
+        return <span style={{ color: "red" }}>Username doesn't exist!</span>;
+      }
+    },
+    homelander: () => {
+      if (!dollar && username === "homelander") {
+        setDollar(true);
+        setIsPushed(true);
+        setIsModalOpen(true);
+        return (
+          <>
+            <br />
+            <br />
+            <br />
+            <span>
+              Congratulations! Your code is pushed to GitHub successfully. The
+              files you pushed should now be visible in the GitHub window above.
+              Refresh the entire page to practice with a new username and
+              password.
+            </span>
+          </>
+        );
+      } else {
+        return <span style={{ color: "red" }}>Username doesn't exist!</span>;
+      }
+    },
+    snowJon: () => {
+      if (!dollar && username === "snowJon") {
+        setDollar(true);
+        setIsPushed(true);
+        setIsModalOpen(true);
+        return (
+          <>
+            <br />
+            <br />
+            <br />
+            <span>
+              Congratulations! Your code is pushed to GitHub successfully. The
+              files you pushed should now be visible in the GitHub window above.
+              Refresh the entire page to practice with a new username and
+              password.
             </span>
           </>
         );
@@ -423,18 +553,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
   return (
     <>
       <div className="terminal-all">
-        {isPushed ? (
-          <div
-            className="refresh"
-            onClick={() => {
-              setIsPushed(false);
-              gitCmd = "";
-            }}
-          >
-            <RiRefreshLine />
-          </div>
-        ) : null}
-        <motion.div
+        <div
           className="termcontainer"
           id={!darkMode ? "" : "termdark"}
           initial={{ opacity: 0 }}
@@ -451,7 +570,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
             errorMessage={"ERR: unidentified command"}
             welcomeMessage={welcomeMsg}
           />
-        </motion.div>
+        </div>
       </div>
     </>
   );

@@ -1,7 +1,6 @@
 .wincontainer {
     width: 20vw;
     height: 220px;
-    /* border: 2px solid black; */
     margin: 15px;
     background-image: url("../assets/win11wall.jpg");
     background-size: cover;
@@ -30,7 +29,6 @@
 }
 
 .topbar>img {
-    /* margin-right: 5px; */
     padding: 5px;
 }
 
@@ -90,8 +88,6 @@
 
 .aftertop>* {
     margin-inline: 3px;
-    /* margin-top: 2px;
-    margin-bottom: 2px; */
 }
 
 .aftertop p {
