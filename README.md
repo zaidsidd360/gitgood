@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+<h1 align="center"><img src="https://user-images.githubusercontent.com/87397035/183719869-1a6d85f3-6d06-4801-b095-384b5b9fd12e.png" /><br/>gitGood - Learn to use git, interactively!</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p>This project idea came into my mind right when I started learning web developement and started playing around with git and GitHub. It consists of an <strong>in browser terminal</strong> with a psuedo file system that is staged and pushed through the CLI to the <strong>mock GitHub window</strong> (I tried my best with the GitHub ui recreation lol). There's also a Windows folder window to showcase how the folder structure would look on a GUI system. The instructions tab on the left tells the user what to do and which commands to run.<br/><br/>This was a project I initially planned on doing with vanilla js, but as I dove deeper into the abyss that is the react ecosystem, I figured this would be much more fun done in react. It taught me a whole lot about <strong>state management</strong> and why larger projects would need something like redux. It's a <strong>desktop only</strong> website made to not function on mobile intentionally. You can still run a few commands on the phone version though.</p>
+<h3>Here's the <a href="https://zaidsidd360.github.io/gitgood/" target="_blank">live url.</a></h3>
 
-## Available Scripts
+## Screenshots
 
-In the project directory, you can run:
+#### Dark Mode 
+![Dark Hero](https://user-images.githubusercontent.com/87397035/186506485-80ba4ae6-110c-4c34-8605-dc256561e3f0.png)
+![Dark Main](https://user-images.githubusercontent.com/87397035/186506489-ed5391f8-028c-4dc9-973b-74bcdf66a23f.png)
+#### Light Mode
+![Light Hero](https://user-images.githubusercontent.com/87397035/186506492-3bd83fd1-c699-40af-997f-73b4802da209.png)
+![Light Main](https://user-images.githubusercontent.com/87397035/186506497-74f51742-7504-4e03-ba31-5f4afa35442b.png)
+#### On completing the tutorial
+![After pushed](https://user-images.githubusercontent.com/87397035/186506473-8e68e1b2-5e6b-4990-a83a-cca109910689.png)
 
-### `npm start`
+## Run Locally
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Clone the project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+  git clone https://github.com/zaidsidd360/gitgood.git
+```
 
-### `npm test`
+Go to the project directory
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+  cd gitgood
+```
 
-### `npm run build`
+Install dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+  npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start the server
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+  npm run start
+```
 
-### `npm run eject`
+<h2>Technologies Used</h2>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<ul>
+<li>Reactjs</li>
+<li>Context Api</li>
+<li>CSS</li>
+<li><a href="https://github.com/splinetool" target="_blank">Spline</a></li>
+<li><a href="https://github.com/bony2023/react-terminal#readme" target="_blank">React Terminal</a></li>
+<li><a href="https://github.com/nitin42/terminal-in-react" target="_blank">Terminal In React</a></li>
+</ul>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
