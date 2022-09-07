@@ -348,7 +348,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
         }
       } else if (
         text ===
-        `remote add origin 'https://github.com/${username}/gitgoodrepo.git'`
+        `remote add origin https://github.com/${username}/gitgoodrepo.git`
       ) {
         if (gitCmd === "commit") {
           gitCmd = "remote";

@@ -94,8 +94,8 @@ function Home({ appCallback, setIsModalOpen, username, password }) {
                   <br />
                   Next, run{" "}
                   <code className="code" id="wrap">
-                    git remote add origin 'https://github.com/{username}
-                    /gitgoodrepo.git'
+                    git remote add origin https://github.com/{username}
+                    /gitgoodrepo.git
                   </code>
                   <br />
                   This command lets the GitHub servers know exactly which
