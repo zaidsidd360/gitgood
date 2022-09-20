@@ -2,11 +2,15 @@ import "./App.css";
 import Home from "./pages/Home";
 import { useState, useEffect } from "react";
 import TerminalMobile from "./components/TerminalMobile";
+import { useLockBodyScroll, useToggle } from "react-use";
+
 
 const Modal = ({ setIsModalOpen, password, username }) => {
   const [inputValue, setinputValue] = useState("");
 
   const [isPassWordCorrect, setIsPasswordCorrect] = useState(true);
+
+  const [locked, setLocked] = useToggle(false);
 
   const handleSubmit = () => {
     if (inputValue !== password) {
@@ -14,8 +18,11 @@ const Modal = ({ setIsModalOpen, password, username }) => {
     } else {
       setIsPasswordCorrect(true);
       setIsModalOpen(false);
+      setLocked(false)
     }
   };
+
+  useLockBodyScroll(locked)
 
   return (
     <>

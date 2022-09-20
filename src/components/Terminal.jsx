@@ -3,6 +3,7 @@ import { ReactTerminal } from "react-terminal";
 import "../styles/Terminal.css";
 import { DarkContext } from "../pages/Home.jsx";
 import { SocialIcon } from "react-social-icons";
+import { useLockBodyScroll, useToggle } from "react-use";
 
 function Terminal({ callback, setIsModalOpen, username }) {
   const { darkMode, setDarkMode } = useContext(DarkContext);
@@ -10,6 +11,8 @@ function Terminal({ callback, setIsModalOpen, username }) {
   const [isPushed, setIsPushed] = useState(false);
 
   const [dollar, setDollar] = useState(true);
+
+  const [locked, setLocked] = useToggle(false);
 
   let currentDirArr = ["/C", "Users", "Desktop"];
 
@@ -24,6 +27,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
   const commands = {
     pusheed: () => {
       setIsModalOpen(true);
+      setLocked(true);
     },
     "help(gitgood)": () => {
       return (
@@ -391,6 +395,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
         setDollar(true);
         setIsPushed(true);
         setIsModalOpen(true);
+        setLocked(true);
         return (
           <>
             <br />
@@ -399,8 +404,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
             <span>
               Congratulations! Your code is pushed to GitHub successfully. The
               files you pushed should now be visible in the GitHub window above.
-              Refresh the entire page to practice with a new username and
-              password.
+              Refresh the tab to practice with a new username and password.
             </span>
           </>
         );
@@ -413,6 +417,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
         setDollar(true);
         setIsPushed(true);
         setIsModalOpen(true);
+        setLocked(true);
         return (
           <>
             <br />
@@ -421,8 +426,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
             <span>
               Congratulations! Your code is pushed to GitHub successfully. The
               files you pushed should now be visible in the GitHub window above.
-              Refresh the entire page to practice with a new username and
-              password.
+              Refresh the tab to practice with a new username and password.
             </span>
           </>
         );
@@ -435,6 +439,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
         setDollar(true);
         setIsPushed(true);
         setIsModalOpen(true);
+        setLocked(true);
         return (
           <>
             <br />
@@ -443,8 +448,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
             <span>
               Congratulations! Your code is pushed to GitHub successfully. The
               files you pushed should now be visible in the GitHub window above.
-              Refresh the entire page to practice with a new username and
-              password.
+              Refresh the tab to practice with a new username and password.
             </span>
           </>
         );
@@ -457,6 +461,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
         setDollar(true);
         setIsPushed(true);
         setIsModalOpen(true);
+        setLocked(true);
         return (
           <>
             <br />
@@ -465,8 +470,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
             <span>
               Congratulations! Your code is pushed to GitHub successfully. The
               files you pushed should now be visible in the GitHub window above.
-              Refresh the entire page to practice with a new username and
-              password.
+              Refresh the tab to practice with a new username and password.
             </span>
           </>
         );
@@ -479,6 +483,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
         setDollar(true);
         setIsPushed(true);
         setIsModalOpen(true);
+        setLocked(true);
         return (
           <>
             <br />
@@ -487,8 +492,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
             <span>
               Congratulations! Your code is pushed to GitHub successfully. The
               files you pushed should now be visible in the GitHub window above.
-              Refresh the entire page to practice with a new username and
-              password.
+              Refresh the tab to practice with a new username and password.
             </span>
           </>
         );
@@ -501,6 +505,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
         setDollar(true);
         setIsPushed(true);
         setIsModalOpen(true);
+        setLocked(true);
         return (
           <>
             <br />
@@ -509,8 +514,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
             <span>
               Congratulations! Your code is pushed to GitHub successfully. The
               files you pushed should now be visible in the GitHub window above.
-              Refresh the entire page to practice with a new username and
-              password.
+              Refresh the tab to practice with a new username and password.
             </span>
           </>
         );
@@ -523,6 +527,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
         setDollar(true);
         setIsPushed(true);
         setIsModalOpen(true);
+        setLocked(true);
         return (
           <>
             <br />
@@ -531,8 +536,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
             <span>
               Congratulations! Your code is pushed to GitHub successfully. The
               files you pushed should now be visible in the GitHub window above.
-              Refresh the entire page to practice with a new username and
-              password.
+              Refresh the tab to practice with a new username and password.
             </span>
           </>
         );
@@ -549,6 +553,8 @@ function Terminal({ callback, setIsModalOpen, username }) {
       <br />
     </span>
   );
+
+  useLockBodyScroll(locked);
 
   return (
     <>
