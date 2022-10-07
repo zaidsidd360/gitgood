@@ -1,10 +1,7 @@
-* {
-    margin: 0;
-}
 
 .gitcontainer {
     width: 20vw;
-    height: 220px;
+    height: 30vh;
     border-radius: 5px;
     margin: 15px;
     background-color: #0D1117;

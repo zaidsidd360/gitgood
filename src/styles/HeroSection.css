@@ -22,13 +22,21 @@
 
 .hero-left {
     text-align: right;
-    min-width: 450px;
+    max-width: 450px;
     margin-right: 80px;
-    padding-left: 50px;
+    padding-left: 80px;
     padding-bottom: 30px;
     border-left: 2px solid black;
     color: black;
-    transform: translateX(-300px);
+    transform: translateX(7vw);
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    min-height: 70vh;
 }
 
 #heroleftdark {

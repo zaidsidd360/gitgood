@@ -1,18 +1,16 @@
-import React from "react";
+import React, { Suspense } from "react";
 import "../styles/HeroSection.css";
 import Spline from "@splinetool/react-spline";
-import { useMemo } from "react";
 
 function HeroSection({ darkMode }) {
-  const memoizedSpline = useMemo(() => {
-    return (
-      <Spline scene="https://prod.spline.design/m-pzmi-J3lv1z8vn/scene.splinecode" />
-    );
-  }, []);
   return (
     <div className="hero-main">
       <div className="hero-container">
-        <div className="hero-right">{memoizedSpline}</div>
+        <div className="hero-right">
+          <Suspense fallback={<div>Loading 3D model...</div>}>
+            <Spline scene="https://prod.spline.design/m-pzmi-J3lv1z8vn/scene.splinecode" />
+          </Suspense>
+        </div>
         <div className="hero-left" id={!darkMode ? "" : "heroleftdark"}>
           <h1 id={!darkMode ? "" : "headingdark"}>
             Learn to use git, interactively!

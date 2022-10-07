@@ -1,6 +1,6 @@
 import "./App.css";
 import Home from "./pages/Home";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import TerminalMobile from "./components/TerminalMobile";
 import { useLockBodyScroll, useToggle } from "react-use";
 
@@ -66,7 +66,7 @@ function App() {
     setIsModalOpen(homePushedValue);
   };
 
-  const userPass = [
+  const userPass = useMemo(()=> [
     ["bingChandler", "tripleNipple"],
     ["williamButcher", "thisIsDiabolical"],
     ["scottMichael", "littleKidLover"],
@@ -74,7 +74,7 @@ function App() {
     ["schruteDwight", "bearsEatBeets"],
     ["homelander", "theRealHeroes"],
     ["snowJon", "iDunWannit"],
-  ]
+  ], [])
 
   const getUserPass = (arr) => {
     let random = Math.floor(Math.random() * arr.length);
@@ -85,7 +85,7 @@ function App() {
     let array = getUserPass(userPass)
     setUsername(array[0])
     setPassword(array[1])
-  }, [])
+  }, [userPass])
 
   return (
     <div className="App">
