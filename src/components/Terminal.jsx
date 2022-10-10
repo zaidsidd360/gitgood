@@ -114,13 +114,21 @@ function Terminal({ callback, setIsModalOpen, username }) {
       !darkMode ? setDarkMode(true) : setDarkMode(false);
     },
     cd: (directory) => {
-      currentDirArr.push(directory);
-      lastItem = directory;
-      return `new path: ${currentDirArr.join("/") + "/"}`;
-    },
-    "cd..": () => {
-      currentDirArr.pop();
-      return `new path: ${currentDirArr.join("/") + "/"}`;
+      if (directory === "") {
+        return (
+          <span>
+            The command <code style={{ color: "green" }}>cd</code> requires a
+            directory name as an argument.
+          </span>
+        );
+      } else if (directory !== "..") {
+        currentDirArr.push(directory);
+        lastItem = directory;
+        return `new path: ${currentDirArr.join("/") + "/"}`;
+      } else if (directory === "..") {
+        currentDirArr.pop();
+        return `new path: ${currentDirArr.join("/") + "/"}`;
+      }
     },
     pwd: () => {
       return `current path: ${currentDirArr.join("/") + "/"}`;
@@ -245,7 +253,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
           return (
             <>
               <span>
-                On branch master
+                On branch <code style={{ color: "green" }}>*master</code>
                 <br />
               </span>
               <br />
