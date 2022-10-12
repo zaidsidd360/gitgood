@@ -5,8 +5,8 @@
 
 version: 2
 updates:
-    # Maintain dependencies for react-terminal
-  - package-ecosystem: "react-terminal" 
+    # Maintain dependencies for npm
+  - package-ecosystem: "npm" 
     directory: "/" # Location of package manifests
     schedule:
       interval: "monthly"
