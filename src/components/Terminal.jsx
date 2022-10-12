@@ -25,9 +25,6 @@ function Terminal({ callback, setIsModalOpen, username }) {
   }, [callback, isPushed]);
 
   const commands = {
-    pusheed: () => {
-      setIsPushed(true);
-    },
     "help(gitgood)": () => {
       return (
         <>
