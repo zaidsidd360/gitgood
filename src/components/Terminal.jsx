@@ -4,7 +4,6 @@ import "../styles/Terminal.css";
 import { DarkContext } from "../pages/Home.jsx";
 import { SocialIcon } from "react-social-icons";
 import { useLockBodyScroll, useToggle } from "react-use";
-import Refresh from "../assets/refresh.png";
 
 function Terminal({ callback, setIsModalOpen, username }) {
   const { darkMode, setDarkMode } = useContext(DarkContext);
@@ -26,6 +25,9 @@ function Terminal({ callback, setIsModalOpen, username }) {
   }, [callback, isPushed]);
 
   const commands = {
+    pusheed: () => {
+      setIsPushed(true);
+    },
     "help(gitgood)": () => {
       return (
         <>
@@ -146,7 +148,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
               <br />
             </span>
             <span>
-              d----&emsp;02-07-2022{"  "}18:03&emsp;gitgud
+              d----&emsp;02-07-2022{"  "}18:03&emsp;gitgood
               <br />
             </span>
             <span>
@@ -409,8 +411,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
             <span>
               Congratulations! Your code is pushed to GitHub successfully. The
               files you pushed should now be visible in the GitHub window above.
-              Click on the refresh button at the top right of this terminal(or
-              refresh the tab) to practice with a new username and password.
+              Refresh the page to practice with a new username and password.
             </span>
           </>
         );
@@ -432,8 +433,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
             <span>
               Congratulations! Your code is pushed to GitHub successfully. The
               files you pushed should now be visible in the GitHub window above.
-              Click on the refresh button at the top right of this terminal(or
-              refresh the tab) to practice with a new username and password.
+              Refresh the page to practice with a new username and password.
             </span>
           </>
         );
@@ -455,8 +455,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
             <span>
               Congratulations! Your code is pushed to GitHub successfully. The
               files you pushed should now be visible in the GitHub window above.
-              Click on the refresh button at the top right of this terminal(or
-              refresh the tab) to practice with a new username and password.
+              Refresh the page to practice with a new username and password.
             </span>
           </>
         );
@@ -478,8 +477,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
             <span>
               Congratulations! Your code is pushed to GitHub successfully. The
               files you pushed should now be visible in the GitHub window above.
-              Click on the refresh button at the top right of this terminal(or
-              refresh the tab) to practice with a new username and password.
+              Refresh the page to practice with a new username and password.
             </span>
           </>
         );
@@ -501,8 +499,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
             <span>
               Congratulations! Your code is pushed to GitHub successfully. The
               files you pushed should now be visible in the GitHub window above.
-              Click on the refresh button at the top right of this terminal(or
-              refresh the tab) to practice with a new username and password.
+              Refresh the page to practice with a new username and password.
             </span>
           </>
         );
@@ -524,8 +521,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
             <span>
               Congratulations! Your code is pushed to GitHub successfully. The
               files you pushed should now be visible in the GitHub window above.
-              Click on the refresh button at the top right of this terminal(or
-              refresh the tab) to practice with a new username and password.
+              Refresh the page to practice with a new username and password.
             </span>
           </>
         );
@@ -547,8 +543,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
             <span>
               Congratulations! Your code is pushed to GitHub successfully. The
               files you pushed should now be visible in the GitHub window above.
-              Click on the refresh button at the top right of this terminal(or
-              refresh the tab) to practice with a new username and password.
+              Refresh the page to practice with a new username and password.
             </span>
           </>
         );
@@ -571,18 +566,6 @@ function Terminal({ callback, setIsModalOpen, username }) {
   return (
     <>
       <div className="terminal-all">
-        {isPushed ? (
-          <img
-            onClick={() => {
-              setInterval(() => {
-                window.location.reload();
-              }, 400);
-            }}
-            className="refresh"
-            src={Refresh}
-            alt=""
-          />
-        ) : null}
         <div
           className="termcontainer"
           id={!darkMode ? "" : "termdark"}

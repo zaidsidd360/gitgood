@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useRef } from "react";
 import "../styles/Git.css";
 import { DarkContext } from "../pages/Home.jsx";
 import {
@@ -9,11 +9,19 @@ import {
   GitBranchIcon,
   FileDirectoryFillIcon,
   TagIcon,
+  TriangleDownIcon,
 } from "@primer/octicons-react";
+import RemoteURL from "./RemoteURL";
+import { useClickAway } from "react-use";
 
 function Git({ isPushedHome, username }) {
   const size = 16;
   const { darkMode } = useContext(DarkContext);
+  const [isUrlOpen, setIsUrlOpen] = useState(false);
+  const urlRef = useRef(null);
+  useClickAway(urlRef, () => {
+    setIsUrlOpen(false);
+  });
   return (
     <>
       <div className="gitcontainer" id={!darkMode ? "gitlight" : ""}>
@@ -41,6 +49,23 @@ function Git({ isPushedHome, username }) {
               <TagIcon size={12} fill={!darkMode ? "black" : "white"} />
               <h6>0</h6>
               <p>tags</p>
+            </div>
+            <div className="codeurl" ref={urlRef}>
+              <button
+                onClick={() => {
+                  setIsUrlOpen(!isUrlOpen);
+                }}
+                className="codeurl-btn"
+              >
+                Code
+                <TriangleDownIcon />
+              </button>
+              <div
+                className="remoteurl"
+                style={{ display: isUrlOpen ? "flex" : "none" }}
+              >
+                <RemoteURL username={username} darkMode={darkMode} />
+              </div>
             </div>
           </div>
         </div>

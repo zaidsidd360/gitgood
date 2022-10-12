@@ -9,6 +9,7 @@ import { useState, createContext, useCallback } from "react";
 import DarkModeToggle from "react-dark-mode-toggle";
 import { TerminalContextProvider } from "react-terminal";
 import HeroSection from "../components/HeroSection";
+import { TriangleDownIcon, CopyIcon } from "@primer/octicons-react";
 
 export const DarkContext = createContext(null);
 
@@ -53,49 +54,76 @@ function Home({ appCallback, setIsModalOpen, username, password }) {
                   id={!darkMode ? "instructions-light" : ""}
                 >
                   Your username for GitHub is{" "}
-                  <code className="code">{username}</code> and the extremely
-                  secret password to that is{" "}
-                  <code className="code">{password}</code>(remember this, it'll
-                  come in handy later). Make sure you type/copy each command
-                  EXACTLY as it is, punctuations and everything. Let's go!
+                  <code className={darkMode ? "code" : "codelight"}>
+                    {username}
+                  </code>{" "}
+                  and the extremely secret password to that is{" "}
+                  <code className={darkMode ? "code" : "codelight"}>
+                    {password}
+                  </code>
+                  (remember this, it'll come in handy later). Make sure you
+                  type/copy each command EXACTLY as it is, punctuations and
+                  everything. Let's go!
                   <br />
                   <br />
                   The very first command you'll wanna execute is{" "}
-                  <code className="code">pwd</code> to check the present working
-                  directory. If it returns{" "}
+                  <code className={darkMode ? "code" : "codelight"}>
+                    pwd
+                  </code>{" "}
+                  to check the present working directory. If it returns{" "}
                   <code>"current path: /C/Users/Desktop/"</code>, run{" "}
-                  <code className="code">cd gitgood</code>. This will make sure
-                  you're in the gitgood folder. Once inside, you may run{" "}
-                  <code className="code">ls</code> to see all the files and
-                  folders listed.
+                  <code className={darkMode ? "code" : "codelight"}>
+                    cd gitgood
+                  </code>
+                  . This will make sure you're in the gitgood folder. Once
+                  inside, you may run{" "}
+                  <code className={darkMode ? "code" : "codelight"}>ls</code> to
+                  see all the files and folders listed.
                   <br />
                   <br />
-                  Now go ahead and run <code className="code">git init</code>
+                  Now go ahead and run{" "}
+                  <code className={darkMode ? "code" : "codelight"}>
+                    git init
+                  </code>
                   <br />
                   This command initializes an empty Git repositry in the current
                   folder.
                   <br />
                   <br />
-                  Next, run <code className="code">git add .</code>
+                  Next, run{" "}
+                  <code className={darkMode ? "code" : "codelight"}>
+                    git add .
+                  </code>
                   <br />
                   This command stages the files to be pushed in the newly
                   initialized empty git repository.
                   <br />
                   <br />
-                  Next, run <code className="code">git status</code>
+                  Next, run{" "}
+                  <code className={darkMode ? "code" : "codelight"}>
+                    git status
+                  </code>
                   <br />
                   This command lets you see all the files staged for pushing.
                   <br />
                   <br />
                   Now that you've checked all the files staged for pushing, go
                   ahead and commit the changes with{" "}
-                  <code className="code">git commit -m 'first commit'</code>
+                  <code className={darkMode ? "code" : "codelight"}>
+                    git commit -m 'first commit'
+                  </code>
                   <br />
                   <br />
-                  Next, run{" "}
-                  <code className="code" id="wrap">
-                    git remote add origin https://github.com/{username}
-                    /gitgoodrepo.git
+                  Next, go to the GitHub window and click on the{" "}
+                  <button className="codeurl-btn">
+                    Code <TriangleDownIcon />
+                  </button>{" "}
+                  button. Then, click on the&emsp; <CopyIcon size={20} />
+                  &emsp; button to copy your remote url. After copying, type the
+                  following command in the terminal and replace YOUR-REMOTE-URL
+                  with the copied url. <br />
+                  <code className={darkMode ? "code" : "codelight"} id="wrap">
+                    git remote add origin YOUR-REMOTE-URL
                   </code>
                   <br />
                   This command lets the GitHub servers know exactly which
@@ -103,7 +131,9 @@ function Home({ appCallback, setIsModalOpen, username, password }) {
                   <br />
                   <br />
                   All that's left now is to actually push the files. Run{" "}
-                  <code className="code">git push -u origin master</code>
+                  <code className={darkMode ? "code" : "codelight"}>
+                    git push -u origin master
+                  </code>
                   <br />
                   At this point, to make sure you are the owner/creator of the
                   repository you're trying to push to, GitHub will ask for your

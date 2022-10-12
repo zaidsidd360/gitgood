@@ -22,7 +22,7 @@
     background-color: #c8d6e5;
 }
 
-.mainnav> img {
+.mainnav>img {
     margin-left: 30px;
 }
 
@@ -71,6 +71,8 @@
     overflow-y: scroll;
     box-shadow: 5px 5px 15px #161616;
     margin-top: 32px;
+    line-height: 25px;
+    font-size: 18px;
 }
 
 .instructions a {
@@ -91,7 +93,7 @@
     margin-right: 50px;
 }
 
-.git-win-container{
+.git-win-container {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -99,14 +101,14 @@
     margin-bottom: 50px;
 }
 
-.textcontainer > h1 {
+.textcontainer>h1 {
     text-align: left;
     background: url("https://media.giphy.com/media/KcnbWfsuFr7JpgowGT/giphy.gif");
     background-position: center;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    padding:  20px 0px;
+    padding: 20px 0px;
     transition: all 200ms ease;
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
@@ -116,7 +118,7 @@
     color: black;
 }
 
-.textcontainer > p > code {
+.textcontainer>p>code {
     color: green;
 }
 
@@ -130,8 +132,19 @@
 
 .code {
     min-width: auto;
-    background: linear-gradient(to right, rgb(252, 190, 190), rgb(180, 220, 249));
-    color: rgb(0, 0, 0);
+    background-color: #232325;
+    color: rgb(161, 255, 161);
+    /* border: 1px solid #1e1e20; */
+    border-radius: 5px;
+    padding: 2px;
+    white-space: nowrap;
+}
+
+.codelight {
+    min-width: auto;
+    background-color: #ffffff;
+    color: rgb(0, 147, 0);
+    /* border: 1px solid #cbcbcb; */
     border-radius: 5px;
     padding: 2px;
     white-space: nowrap;
@@ -141,7 +154,7 @@
     white-space: break-spaces;
 }
 
-.textcontainer > p {
+.textcontainer>p {
     display: none;
 }
 
@@ -165,12 +178,12 @@
         width: 100vw;
     }
 
-    .textcontainer > h1 {
+    .textcontainer>h1 {
         font-size: 20px;
         margin-left: 20px;
     }
 
-    .mainnav> img {
+    .mainnav>img {
         margin-left: 20px;
     }
 
@@ -197,11 +210,11 @@
         min-height: 70px;
     }
 
-    .textcontainer > h1 {
+    .textcontainer>h1 {
         display: none;
     }
 
-    .textcontainer > p {
+    .textcontainer>p {
         display: block;
         margin: 10px 20px;
         text-align: justify;

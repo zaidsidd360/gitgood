@@ -1,0 +1,92 @@
+.remoteurl-container {
+    background-color: #161b22;
+    height: 10vh;
+    width: 9vw;
+    border: 0.5px solid #30363d;
+    border-radius: 3px;
+    color: white;
+}
+
+.firstline {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.ques {
+    margin-left: auto;
+    margin-right: 3px;
+}
+
+.termurl {
+    margin-right: 4px;
+    margin-left: 3px;
+}
+
+.https {
+    width: max-content;
+    text-align: left;
+    margin-left: 4px;
+    margin-top: 4px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #f78166;
+}
+
+.lastline {
+    display: flex;
+    align-items: center;
+    margin-left: 4px;
+    margin-top: 8px;
+}
+
+.urlinput {
+    font-size: small;
+    outline: none;
+    border: 0.25px solid #30363d;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    max-width: 80%;
+    background-color: #161b22;
+    color: white;
+}
+
+.copyicon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.25px solid #30363d;
+    padding: 3px 5px 1px 8px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.copyicon:hover {
+    border: 0.25px solid #687380;
+}
+
+.check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.25px solid green;
+    padding: 3px 5px 1px 8px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.copyicon:hover {
+    cursor: pointer;
+}
+
+.lastline>p {
+    font-size: small;
+    margin-left: 3px;
+}
+
+.copybtn {
+    background-color: #21262d;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
