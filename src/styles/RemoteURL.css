@@ -47,7 +47,7 @@
     border: 0.25px solid #30363d;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    max-width: 80%;
+    width: 80%;
     background-color: #161b22;
     color: white;
 }
