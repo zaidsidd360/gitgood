@@ -234,9 +234,9 @@ function Terminal({ callback, setIsModalOpen, username }) {
         } else if (isPushed === true) {
           return "You should click on the refresh button and then try again!";
         }
-      } else if (text === "add .") {
+      } else if (text === "add -A") {
         if (gitCmd === "init") {
-          gitCmd = "add .";
+          gitCmd = "add -A";
           return "";
         } else {
           return (
@@ -247,7 +247,7 @@ function Terminal({ callback, setIsModalOpen, username }) {
           );
         }
       } else if (text === "status") {
-        if (gitCmd === "add .") {
+        if (gitCmd === "add -A") {
           gitCmd = "status";
           return (
             <>

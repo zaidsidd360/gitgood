@@ -92,7 +92,7 @@ function Home({ appCallback, setIsModalOpen, username, password }) {
                   <br />
                   Next, run{" "}
                   <code className={darkMode ? "code" : "codelight"}>
-                    git add .
+                    git add -A
                   </code>
                   <br />
                   This command stages the files to be pushed in the newly
