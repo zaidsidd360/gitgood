@@ -1,15 +1,20 @@
-import React, { Suspense } from "react";
+import React, { useState } from "react";
 import "../styles/HeroSection.css";
 import Spline from "@splinetool/react-spline";
 
 function HeroSection({ darkMode }) {
+  const [isLoading, setIsLoading] = useState(true);
   return (
     <div className="hero-main">
       <div className="hero-container">
         <div className="hero-right">
-          <Suspense fallback={<div>Loading 3D model...</div>}>
-            <Spline scene="https://prod.spline.design/m-pzmi-J3lv1z8vn/scene.splinecode" />
-          </Suspense>
+          {isLoading ? <div className="loader"></div> : null}
+          <Spline
+            onLoad={() => {
+              setIsLoading(false);
+            }}
+            scene="https://prod.spline.design/m-pzmi-J3lv1z8vn/scene.splinecode"
+          />
         </div>
         <div className="hero-left" id={!darkMode ? "" : "heroleftdark"}>
           <h1 id={!darkMode ? "" : "headingdark"}>
