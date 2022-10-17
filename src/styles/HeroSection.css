@@ -44,14 +44,14 @@
     border-left: 2px solid white;
 }
 
-.hero-left > h1 {
+.hero-left>h1 {
     text-align: right;
     background: url("https://media.giphy.com/media/KcnbWfsuFr7JpgowGT/giphy.gif");
     background-position: center;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    padding:  20px 0px;
+    padding: 20px 0px;
     transition: all 200ms ease;
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
@@ -71,4 +71,30 @@
 
 .green {
     color: green;
+}
+
+.loader {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: -10px 8px 0 18px inset #fff;
+    animation: rotate 1s linear infinite;
+}
+
+.loader::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    bottom: 16px;
+    background: rgb(187, 245, 99);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg)
+    }
 }
