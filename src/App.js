@@ -12,9 +12,14 @@ const Modal = ({ setIsModalOpen, password, username }) => {
 
   const [locked, setLocked] = useToggle(false);
 
-  const handleSubmit = () => {
+  const [isFormShaking, setIsFormShaking] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
     if (inputValue !== password) {
       setIsPasswordCorrect(false);
+      setIsFormShaking(true);
     } else {
       setIsPasswordCorrect(true);
       setIsModalOpen(false);
@@ -24,15 +29,22 @@ const Modal = ({ setIsModalOpen, password, username }) => {
 
   useLockBodyScroll(locked)
 
+  useEffect(() => {
+    setTimeout(() => {
+      setIsFormShaking(false)
+    }, 300);
+  }, [isFormShaking])
+  
+
   return (
     <>
       <div className="modalback">
         <div className="modal">
           <p>password for 'https://{username}@github.com':</p>
           <p className="graypass">
-            I knew you wouldn't remember it: {password}
+            I knew you wouldn't remember it: <strong>{password}</strong>
           </p>
-          <div>
+          <form className={isFormShaking ? "shake" : null}>
             <input
               type="password"
               name="gitpass"
@@ -47,7 +59,7 @@ const Modal = ({ setIsModalOpen, password, username }) => {
             >
               OK
             </button>
-          </div>
+          </form>
           {!isPassWordCorrect ? (
             <p className="redpass">Wrong password!</p>
           ) : null}
