@@ -5,7 +5,7 @@
   backdrop-filter: blur(15px);
   z-index: 9999;
   position: absolute;
-  transform: translate(0%,80%);
+  transform: translate(0%, 80%);
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -28,32 +28,35 @@
   margin-inline: 35px;
 }
 
-.modal>div {
+.modal>form {
   margin-top: 30px;
   /* border: 2px solid lightgray; */
+  border-radius: 10px;
+  overflow: hidden;
+  height: 35px;
 }
 
 .modal input {
-  /* height: 15px; */
   outline: none;
   border: none;
   padding: 0;
-  padding-left: 5px;
+  padding-left: 10px;
   margin: 0;
-  /* outline:  lightgray solid 2px; */
+  height: 100%;
 }
 
 .btn {
   padding: 0;
   margin: 0;
-  /* height: 21px; */
+  height: 100%;
   background-color: rgb(27, 162, 27);
   border: 0;
   width: 70px;
 }
 
 .btn:hover {
-  background-color: rgb(123, 219, 123);
+  background-color: rgb(61, 141, 61);
+  cursor: pointer;
 }
 
 .redpass {
@@ -62,17 +65,50 @@
 }
 
 .graypass {
-  color: rgb(192, 192, 192);
+  color: rgb(182, 182, 182);
 }
 
 .App {
   text-align: center;
 }
 
+.shake {
+  animation: shake 300ms linear;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(-30px);
+    /* rotate: -5deg; */
+  }
+
+  25% {
+    transform: translateX(30px);
+  }
+
+  50% {
+    transform: translateX(-15px);
+  }
+
+  75% {
+    transform: translateX(15px);
+  }
+
+  87.5% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0px);
+    /* rotate: 0deg; */
+  }
+}
+
 @media (max-width: 1012px) {
   .modalback {
     height: 200vh;
   }
+
   .modal {
     margin-top: 105vh;
     height: 30vh;
