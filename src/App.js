@@ -7,13 +7,9 @@ import { EyeClosedIcon, EyeIcon } from "@primer/octicons-react";
 
 const Modal = ({ setIsModalOpen, password, username }) => {
   const [inputValue, setinputValue] = useState("");
-
   const [isPassWordCorrect, setIsPasswordCorrect] = useState(true);
-
   const [locked, setLocked] = useToggle(false);
-
   const [isFormShaking, setIsFormShaking] = useState(false);
-
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
   const handleSubmit = (e) => {
@@ -48,10 +44,11 @@ const Modal = ({ setIsModalOpen, password, username }) => {
           <form className={isFormShaking ? "shake" : null} id="formid">
             <input
               type={isPasswordVisible ? "text" : "password"}
-              name="gitpass"
+              id="gitpass"
               onChange={(e) => {
                 setinputValue(e.target.value);
               }}
+              placeholder="Enter your password"
             />
             <button
               className="btn"
@@ -74,7 +71,7 @@ const Modal = ({ setIsModalOpen, password, username }) => {
             </div>
           </form>
           {!isPassWordCorrect ? (
-            <p className="redpass">Wrong password!</p>
+            <p className="redpass">Uh-oh! Wrong password.</p>
           ) : null}
         </div>
       </div>

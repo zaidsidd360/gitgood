@@ -14,7 +14,7 @@ const RemoteURL = ({ username, darkMode }) => {
   useEffect(() => {
     setTimeout(() => {
       setIsCopied(false);
-    }, 2000);
+    }, 1500);
   }, [isCopied]);
 
   return (
