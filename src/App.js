@@ -1,6 +1,6 @@
 import "./App.css";
 import Home from "./pages/Home";
-import { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import TerminalMobile from "./components/TerminalMobile";
 import { useLockBodyScroll, useToggle } from "react-use";
 import { EyeClosedIcon, EyeIcon } from "@primer/octicons-react";
