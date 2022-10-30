@@ -12,7 +12,6 @@
 }
 
 .modal {
-  /* margin-bottom: 25vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,7 +78,6 @@
 @keyframes shake {
   0% {
     transform: translateX(-30px);
-    /* rotate: -5deg; */
   }
 
   25% {
@@ -100,7 +98,6 @@
 
   100% {
     transform: translateX(0px);
-    /* rotate: 0deg; */
   }
 }
 
@@ -111,7 +108,7 @@
 .eyecon {
   position: absolute;
   top: 15%;
-  left: 60%;
+  left: 65%;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -122,6 +119,10 @@
 .eyecon:hover {
   cursor: pointer;
   background-color: rgb(230, 230, 230);
+}
+
+#gitpass {
+  padding-right: 40px;
 }
 
 @media (max-width: 1012px) {
