@@ -1,8 +1,11 @@
 {
   "files": {
-    "main.css": "/gitgood/static/css/main.9a76bc3f.css",
-    "main.js": "/gitgood/static/js/main.6b4b14a8.js",
+    "main.css": "/gitgood/static/css/main.5288d4fd.css",
+    "main.js": "/gitgood/static/js/main.f759757a.js",
+    "static/js/227.17c98230.chunk.js": "/gitgood/static/js/227.17c98230.chunk.js",
+    "static/js/526.e46294f2.chunk.js": "/gitgood/static/js/526.e46294f2.chunk.js",
     "static/js/232.3fec9b98.chunk.js": "/gitgood/static/js/232.3fec9b98.chunk.js",
+    "static/js/237.9bd34bf3.chunk.js": "/gitgood/static/js/237.9bd34bf3.chunk.js",
     "static/media/win11wall.jpg": "/gitgood/static/media/win11wall.31389b05721e38443e57.jpg",
     "static/media/vscode.png": "/gitgood/static/media/vscode.a61dc62c499ed3aeefdc.png",
     "static/media/folderwin.ico": "/gitgood/static/media/folderwin.d6f467783053939a4f9a.ico",
@@ -10,12 +13,15 @@
     "static/media/explorer.ico": "/gitgood/static/media/explorer.0f8f8b6841e76623bc7d.ico",
     "static/media/start.png": "/gitgood/static/media/start.16fe70e384fc319dc857.png",
     "index.html": "/gitgood/index.html",
-    "main.9a76bc3f.css.map": "/gitgood/static/css/main.9a76bc3f.css.map",
-    "main.6b4b14a8.js.map": "/gitgood/static/js/main.6b4b14a8.js.map",
-    "232.3fec9b98.chunk.js.map": "/gitgood/static/js/232.3fec9b98.chunk.js.map"
+    "main.5288d4fd.css.map": "/gitgood/static/css/main.5288d4fd.css.map",
+    "main.f759757a.js.map": "/gitgood/static/js/main.f759757a.js.map",
+    "227.17c98230.chunk.js.map": "/gitgood/static/js/227.17c98230.chunk.js.map",
+    "526.e46294f2.chunk.js.map": "/gitgood/static/js/526.e46294f2.chunk.js.map",
+    "232.3fec9b98.chunk.js.map": "/gitgood/static/js/232.3fec9b98.chunk.js.map",
+    "237.9bd34bf3.chunk.js.map": "/gitgood/static/js/237.9bd34bf3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9a76bc3f.css",
-    "static/js/main.6b4b14a8.js"
+    "static/css/main.5288d4fd.css",
+    "static/js/main.f759757a.js"
   ]
 }
