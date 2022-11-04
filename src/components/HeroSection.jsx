@@ -10,10 +10,10 @@ function HeroSection({ darkMode }) {
         <div className="hero-right">
           {isLoading ? <div className="loader"></div> : null}
           <Spline
-            onLoad={() => {
+            onLoad={(spline) => {
               setIsLoading(false);
             }}
-            scene="https://prod.spline.design/m-pzmi-J3lv1z8vn/scene.splinecode"
+            scene="https://prod.spline.design/OBBSETRsQq3kRE-l/scene.splinecode"
           />
         </div>
         <div className="hero-left" id={!darkMode ? "" : "heroleftdark"}>
