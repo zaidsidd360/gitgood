@@ -13,7 +13,7 @@ import { TriangleDownIcon, CopyIcon } from "@primer/octicons-react";
 
 export const DarkContext = createContext(null);
 
-function Home({ appCallback, setIsModalOpen, username, password }) {
+function Home({ className, appCallback, setIsModalOpen, username, password }) {
   const [darkMode, setDarkMode] = useState(true);
   const [isPushedHome, setIsPushedHome] = useState();
 

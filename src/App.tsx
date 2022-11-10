@@ -1,18 +1,24 @@
 import "./App.css";
 import Home from "./pages/Home";
-import React, { useState, useEffect, useMemo } from "react";
-import TerminalMobile from "./components/TerminalMobile";
+import React, { useState, useEffect, useMemo, FormEvent } from "react";
+// import TerminalMobile from "./components/TerminalMobile";
 import { useLockBodyScroll, useToggle } from "react-use";
 import { EyeClosedIcon, EyeIcon } from "@primer/octicons-react";
 
-const Modal = ({ setIsModalOpen, password, username }) => {
+interface ModalProps {
+  setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>,
+  password: string,
+  username: string,
+}
+
+const Modal = ({ setIsModalOpen, password, username }: ModalProps) => {
   const [inputValue, setinputValue] = useState("");
   const [isPassWordCorrect, setIsPasswordCorrect] = useState(true);
   const [locked, setLocked] = useToggle(false);
   const [isFormShaking, setIsFormShaking] = useState(false);
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     e.stopPropagation();
     if (inputValue !== password) {
@@ -41,7 +47,7 @@ const Modal = ({ setIsModalOpen, password, username }) => {
           <p className="graypass">
             I knew you wouldn't remember it: <strong>{password}</strong>
           </p>
-          <form className={isFormShaking ? "shake" : null} id="formid">
+          <form className={isFormShaking ? "shake" : undefined} id="formid">
             <input
               type={isPasswordVisible ? "text" : "password"}
               id="gitpass"
@@ -53,7 +59,7 @@ const Modal = ({ setIsModalOpen, password, username }) => {
             <button
               className="btn"
               onClick={handleSubmit}
-              disabled={inputValue === "" ? true : ""}
+              disabled={inputValue === "" ? true : undefined}
             >
               OK
             </button>
@@ -79,12 +85,12 @@ const Modal = ({ setIsModalOpen, password, username }) => {
   );
 };
 
-function App() {
+function App(): JSX.Element {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
 
-  const appCallback = (homePushedValue) => {
+  const appCallback = (homePushedValue: boolean) => {
     setIsModalOpen(homePushedValue);
   };
 
@@ -101,7 +107,7 @@ function App() {
     []
   );
 
-  const getUserPass = (arr) => {
+  const getUserPass = (arr: string[][]) => {
     let random = Math.floor(Math.random() * arr.length);
     return arr[random];
   };
@@ -129,7 +135,7 @@ function App() {
         <code style={{ color: "green" }}>gg.resources</code> for some amazing
         git resources.
       </p>
-      <TerminalMobile className="termapp" />
+      {/* <TerminalMobile className="termapp" /> */}
       <Home
         className="homeApp"
         appCallback={appCallback}
