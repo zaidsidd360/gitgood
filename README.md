@@ -1,7 +1,7 @@
 <h1 align="center"><img src="https://user-images.githubusercontent.com/87397035/183719869-1a6d85f3-6d06-4801-b095-384b5b9fd12e.png" /><br/>gitGood - Learn to use git, interactively!</h1>
 
 <p>This project idea came to me right when I started learning web developement and started playing around with git and GitHub. It consists of an <strong>in browser terminal</strong> with a psuedo file system that is staged and pushed through the CLI to the <strong>mock GitHub window</strong> (I tried my best with the GitHub ui recreation lol). There's also a Windows folder window to showcase how the folder structure would look on a GUI-based system. The instructions tab on the left tells the user what to do and which commands to run.<br/><br/>This was a project I initially planned on doing with vanilla js, but as I dove deeper into the abyss that is the react ecosystem, I figured this would be much more fun done in react. It taught me a whole lot about <strong>state management</strong> and why larger projects would need something like redux. It's a <strong>desktop only</strong> website made to not function on mobile intentionally. You can still run a few commands on the phone version though.</p>
-<h2>Note: Noticable frame drops on Brave(snap) for linux. Use Chrome(or Firefox) for the best experience.</h2>
+<p><strong>Note:</strong> Noticable frame drops on Brave(snap) for linux. <strong>Use Chrome(or Firefox) for the best experience.</strong></p>
 <h3>Here's the <a href="https://zaidsidd360.github.io/gitgood/" target="_blank">live url.</a></h3>
 
 ## Screenshots
@@ -20,27 +20,27 @@
 
 ![After pushed](https://user-images.githubusercontent.com/87397035/186506473-8e68e1b2-5e6b-4990-a83a-cca109910689.png)
 
-## Run dev server/Run locally
+## Run dev server
 
-Clone the project
+* Clone the project
 
 ```bash
   git clone https://github.com/zaidsidd360/gitgood.git
 ```
 
-Go to the project directory
+* Go to the project directory
 
 ```bash
   cd gitgood
 ```
 
-Install dependencies
+* Install dependencies
 
 ```bash
   npm install
 ```
 
-Start the server
+* Start the server
 
 ```bash
   npm run start
