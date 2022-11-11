@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/HeroSection.css";
 import Spline from "@splinetool/react-spline";
 
-function HeroSection({ darkMode }) {
+function HeroSection({ darkMode }: {darkMode: boolean}) {
   const [isLoading, setIsLoading] = useState(true);
   return (
     <div className="hero-main">

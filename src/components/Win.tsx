@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { DarkContext } from "../pages/Home.jsx";
+import { DarkContext } from "../pages/Home.js";
 import "../styles/Win.css";
 import Folder from "../assets/folderwin.ico";
 import Cross from "../assets/Cross.png";

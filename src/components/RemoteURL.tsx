@@ -8,7 +8,12 @@ import {
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/RemoteURL.css";
 
-const RemoteURL = ({ username, darkMode }) => {
+interface RemoteURLProps {
+  username: string,
+  darkMode: boolean
+}
+
+const RemoteURL = ({ username, darkMode }: RemoteURLProps) => {
   const inputRef = useRef(null);
   const [isCopied, setIsCopied] = useState(false);
   useEffect(() => {

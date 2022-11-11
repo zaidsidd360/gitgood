@@ -1,7 +1,7 @@
 import React from "react";
-import Git from "../components/Git";
-import Terminal from "../components/Terminal";
-import Win from "../components/Win";
+import Git from "../components/Git.js";
+import Terminal from "../components/Terminal.js";
+import Win from "../components/Win.js";
 import "../styles/Home.css";
 import logoLight from "../assets/logolight.png";
 import logoDark from "../assets/logodark.png";
@@ -13,7 +13,15 @@ import { TriangleDownIcon, CopyIcon } from "@primer/octicons-react";
 
 export const DarkContext = createContext(null);
 
-function Home({ className, appCallback, setIsModalOpen, username, password }) {
+interface HomeProps {
+  className?: string,
+  appCallback: any,
+  setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>,
+  username: string,
+  password: string,
+}
+
+function Home({ className, appCallback, setIsModalOpen, username, password }: HomeProps) {
   const [darkMode, setDarkMode] = useState(true);
   const [isPushedHome, setIsPushedHome] = useState();
 
