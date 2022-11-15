@@ -28,7 +28,7 @@
   git clone https://github.com/zaidsidd360/gitgood.git
 ```
 
-* Go to the project directory
+* `cd` into the project directory
 
 ```bash
   cd gitgood
