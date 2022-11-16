@@ -6,12 +6,12 @@
 
 ## Screenshots
 
-#### Dark Mode
+#### Dark
 
 ![Dark Hero](https://user-images.githubusercontent.com/87397035/186506485-80ba4ae6-110c-4c34-8605-dc256561e3f0.png)
 ![Dark Main](https://user-images.githubusercontent.com/87397035/186506489-ed5391f8-028c-4dc9-973b-74bcdf66a23f.png)
 
-#### Light Mode
+#### Light
 
 ![Light Hero](https://user-images.githubusercontent.com/87397035/186506492-3bd83fd1-c699-40af-997f-73b4802da209.png)
 ![Light Main](https://user-images.githubusercontent.com/87397035/186506497-74f51742-7504-4e03-ba31-5f4afa35442b.png)
