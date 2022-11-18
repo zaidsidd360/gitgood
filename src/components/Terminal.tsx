@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { ReactTerminal } from "react-terminal";
 import "../styles/Terminal.css";
-import { DarkContext } from "../pages/Home.js";
+import { DarkContext } from "../pages/Home";
 import { SocialIcon } from "react-social-icons";
 import { useLockBodyScroll, useToggle } from "react-use";
 
@@ -12,7 +12,7 @@ interface TerminalProps {
   username: string
 }
 
-function Terminal({ callback, setIsModalOpen, username }: TerminalProps) {
+const Terminal = ({ callback, setIsModalOpen, username }: TerminalProps): JSX.Element => {
   const { darkMode, setDarkMode } = useContext(DarkContext);
 
   const [isPushed, setIsPushed] = useState(false);

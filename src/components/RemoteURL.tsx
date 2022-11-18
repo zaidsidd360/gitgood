@@ -13,7 +13,7 @@ interface RemoteURLProps {
   darkMode: boolean
 }
 
-const RemoteURL = ({ username, darkMode }: RemoteURLProps) => {
+const RemoteURL = ({ username, darkMode }: RemoteURLProps): JSX.Element => {
   const inputRef = useRef(null);
   const [isCopied, setIsCopied] = useState(false);
   useEffect(() => {

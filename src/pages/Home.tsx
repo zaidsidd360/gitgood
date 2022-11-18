@@ -1,7 +1,7 @@
 import React from "react";
-import Git from "../components/Git.js";
-import Terminal from "../components/Terminal.js";
-import Win from "../components/Win.js";
+import Git from "../components/Git";
+import Terminal from "../components/Terminal";
+import Win from "../components/Win";
 import "../styles/Home.css";
 import logoLight from "../assets/logolight.png";
 import logoDark from "../assets/logodark.png";
@@ -21,7 +21,7 @@ interface HomeProps {
   password: string,
 }
 
-function Home({ className, appCallback, setIsModalOpen, username, password }: HomeProps) {
+function Home({ className, appCallback, setIsModalOpen, username, password }: HomeProps): JSX.Element {
   const [darkMode, setDarkMode] = useState(true);
   const [isPushedHome, setIsPushedHome] = useState();
 

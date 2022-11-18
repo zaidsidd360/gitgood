@@ -3,7 +3,7 @@ import Terminal from "terminal-in-react";
 import "../styles/TerminalMobile.css";
 import { SocialIcon } from "react-social-icons";
 
-function TerminalMobile({ className, darkMode }: {className?: string, darkMode: boolean}) {
+const TerminalMobile = ({ className, darkMode }: {className?: string, darkMode: boolean}): JSX.Element => {
   const commands = {
     "help(gitgood)": () => {
       return (

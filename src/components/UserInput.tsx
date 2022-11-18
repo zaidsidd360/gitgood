@@ -1,6 +1,6 @@
 import React from "react";
 
-const UserInput = () => {
+const UserInput = (): JSX.Element => {
   return (
     <>
       <div>

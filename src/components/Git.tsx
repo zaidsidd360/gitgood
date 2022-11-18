@@ -1,6 +1,6 @@
 import React, { useContext, useState, useRef } from "react";
 import "../styles/Git.css";
-import { DarkContext } from "../pages/Home.js";
+import { DarkContext } from "../pages/Home";
 import {
   LogoGithubIcon,
   MarkGithubIcon,
@@ -19,7 +19,7 @@ interface GitProps {
   username: string
 }
 
-function Git({ isPushedHome, username }: GitProps): JSX.Element {
+const Git = ({ isPushedHome, username }: GitProps): JSX.Element => {
   const size = 16;
   const { darkMode } = useContext(DarkContext);
   const [isUrlOpen, setIsUrlOpen] = useState(false);

@@ -11,7 +11,7 @@ interface ModalProps {
   username: string,
 }
 
-const Modal = ({ setIsModalOpen, password, username }: ModalProps) => {
+const Modal = ({ setIsModalOpen, password, username }: ModalProps): JSX.Element => {
   const [inputValue, setinputValue] = useState("");
   const [isPassWordCorrect, setIsPasswordCorrect] = useState(true);
   const [locked, setLocked] = useToggle(false);
