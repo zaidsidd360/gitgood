@@ -1,11 +1,18 @@
 import React, { useContext, useState, useEffect } from "react";
 import { ReactTerminal } from "react-terminal";
 import "../styles/Terminal.css";
-import { DarkContext } from "../pages/Home.jsx";
+import { DarkContext } from "../pages/Home";
 import { SocialIcon } from "react-social-icons";
 import { useLockBodyScroll, useToggle } from "react-use";
 
-function Terminal({ callback, setIsModalOpen, username }) {
+interface TerminalProps {
+  className?: string,
+  callback: any,
+  setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>,
+  username: string
+}
+
+const Terminal = ({ callback, setIsModalOpen, username }: TerminalProps): JSX.Element => {
   const { darkMode, setDarkMode } = useContext(DarkContext);
 
   const [isPushed, setIsPushed] = useState(false);
@@ -566,12 +573,6 @@ function Terminal({ callback, setIsModalOpen, username }) {
         <div
           className="termcontainer"
           id={!darkMode ? "" : "termdark"}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            type: "spring",
-            duration: 0.8,
-          }}
         >
           <ReactTerminal
             commands={commands}

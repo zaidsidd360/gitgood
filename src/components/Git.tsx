@@ -1,6 +1,6 @@
 import React, { useContext, useState, useRef } from "react";
 import "../styles/Git.css";
-import { DarkContext } from "../pages/Home.jsx";
+import { DarkContext } from "../pages/Home";
 import {
   LogoGithubIcon,
   MarkGithubIcon,
@@ -14,7 +14,12 @@ import {
 import RemoteURL from "./RemoteURL";
 import { useClickAway } from "react-use";
 
-function Git({ isPushedHome, username }) {
+interface GitProps {
+  isPushedHome: boolean,
+  username: string
+}
+
+const Git = ({ isPushedHome, username }: GitProps): JSX.Element => {
   const size = 16;
   const { darkMode } = useContext(DarkContext);
   const [isUrlOpen, setIsUrlOpen] = useState(false);

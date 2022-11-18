@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { DarkContext } from "../pages/Home.jsx";
+import { DarkContext } from "../pages/Home";
 import "../styles/Win.css";
 import Folder from "../assets/folderwin.ico";
 import Cross from "../assets/Cross.png";
@@ -9,7 +9,7 @@ import Start from "../assets/start.png";
 import Search from "../assets/search.ico";
 import Explorer from "../assets/explorer.ico";
 
-function Win() {
+const Win = (): JSX.Element => {
   const { darkMode } = useContext(DarkContext);
 
   return (
