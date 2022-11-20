@@ -49,7 +49,8 @@
 <h2>Technologies Used</h2>
 
 <ul>
-<li>Reactjs</li>
+<li>React</li>
+<li>TypeScript</li>
 <li>Context Api</li>
 <li>CSS</li>
 <li><a href="https://github.com/splinetool" target="_blank">Spline</a></li>
