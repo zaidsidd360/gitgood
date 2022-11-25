@@ -21,10 +21,18 @@ interface HomeProps {
   password: string,
 }
 
-function Home({ className, appCallback, setIsModalOpen, username, password }: HomeProps): JSX.Element {
+function Home(props: HomeProps): JSX.Element {
+
+  const { 
+    appCallback, 
+    setIsModalOpen, 
+    username, 
+    password 
+  } = props;
+
   const [darkMode, setDarkMode] = useState(true);
   const [isPushedHome, setIsPushedHome] = useState();
-
+  
   useCallback(() => {
     appCallback(isPushedHome, darkMode);
   }, [isPushedHome, appCallback, darkMode]);

@@ -10,10 +10,12 @@ import "../styles/RemoteURL.css";
 
 interface RemoteURLProps {
   username: string,
-  darkMode: boolean
 }
 
-const RemoteURL = ({ username, darkMode }: RemoteURLProps): JSX.Element => {
+const RemoteURL = (props: RemoteURLProps): JSX.Element => {
+  
+  const { username } = props;
+
   const inputRef = useRef(null);
   const [isCopied, setIsCopied] = useState(false);
   useEffect(() => {

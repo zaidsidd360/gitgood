@@ -3,7 +3,12 @@ import Terminal from "terminal-in-react";
 import "../styles/TerminalMobile.css";
 import { SocialIcon } from "react-social-icons";
 
-const TerminalMobile = ({ className, darkMode }: {className?: string, darkMode: boolean}): JSX.Element => {
+interface TerminalMobileProps {
+  className?: string
+}
+
+const TerminalMobile = (props: TerminalMobileProps): JSX.Element => {
+  
   const commands = {
     "help(gitgood)": () => {
       return (
@@ -43,14 +48,14 @@ const TerminalMobile = ({ className, darkMode }: {className?: string, darkMode: 
               url="https://github.com/zaidsidd360"
               style={{ height: "30px", width: "30px", marginLeft: "10px" }}
               target="_blank"
-              bgColor={darkMode ? "white" : "black"}
+              bgColor="black"
             />
             <SocialIcon
               url="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=zaidsidd360@gmail.com&su"
               network="email"
               style={{ height: "30px", width: "30px", marginLeft: "10px" }}
               target="_blank"
-              bgColor={darkMode ? "white" : "black"}
+              bgColor="black"
             />
           </span>
           <br />
@@ -101,11 +106,12 @@ const TerminalMobile = ({ className, darkMode }: {className?: string, darkMode: 
     },
   };
 
+
   return (
     <>
       <div className="termobile">
-        <div className="topbar" id={darkMode ? "topdark" : ""}>
-          <div className="topbarContent">
+        <div className="topbar" id="topdark">
+         <div className="topbarContent">
             <div className="red butn"></div>
             <div className="yellow butn"></div>
             <div className="green butn"></div>
@@ -113,11 +119,11 @@ const TerminalMobile = ({ className, darkMode }: {className?: string, darkMode: 
         </div>
         <Terminal
           commands={commands}
-          backgroundColor={darkMode ? "#28292B" : "#E9E9E9"}
+          backgroundColor="#28292B"
           allowTabs={false}
-          prompt={darkMode ? "lightblue" : "blue"}
+          prompt="lightblue"
           promptSymbol="~$"
-          color={darkMode ? "white" : "black"}
+          color="white"
           hideTopBar={true}
           style={{
             fontSize: "0.9em",
