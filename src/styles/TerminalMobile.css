@@ -33,12 +33,12 @@
     .topbar {
         min-height: 25px;
         max-width: 600px;
-        margin-right: 7%;
-        background-color: #28292B;
+        margin-right: 7.5%;
+        background-color: #ddd;
     }
 
     #topdark {
-        background-color: #E9E9E9;
+        background-color: #ddd;
     }
 
     .topbarContent {
@@ -54,15 +54,15 @@
     }
 
     .green {
-        background-color: rgb(32, 206, 32);
+        background-color: rgb(53, 172, 53);
     }
 
     .yellow {
-        background-color: rgb(240, 240, 57);
+        background-color: rgb(232, 200, 21);
     }
 
     .red {
-        background-color: rgb(246, 89, 89);
+        background-color: rgb(207, 49, 49);
     }
 
     .terminal-base {

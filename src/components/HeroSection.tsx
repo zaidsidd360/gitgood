@@ -2,8 +2,16 @@ import React, { useState } from "react";
 import "../styles/HeroSection.css";
 import Spline from "@splinetool/react-spline";
 
-const HeroSection = ({ darkMode }: {darkMode: boolean}): JSX.Element => {
+interface HeroSectionProps {
+  darkMode: boolean
+}
+
+const HeroSection = (props: HeroSectionProps): JSX.Element => {
+  
+  const { darkMode } = props;
+
   const [isLoading, setIsLoading] = useState(true);
+  
   return (
     <div className="hero-main">
       <div className="hero-container">

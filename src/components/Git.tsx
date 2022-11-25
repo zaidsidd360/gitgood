@@ -19,7 +19,10 @@ interface GitProps {
   username: string
 }
 
-const Git = ({ isPushedHome, username }: GitProps): JSX.Element => {
+const Git = (props: GitProps): JSX.Element => {
+
+  const { isPushedHome, username } = props
+
   const size = 16;
   const { darkMode } = useContext(DarkContext);
   const [isUrlOpen, setIsUrlOpen] = useState(false);
@@ -27,6 +30,8 @@ const Git = ({ isPushedHome, username }: GitProps): JSX.Element => {
   useClickAway(urlRef, () => {
     setIsUrlOpen(false);
   });
+
+
   return (
     <>
       <div className="gitcontainer" id={!darkMode ? "gitlight" : ""}>
@@ -69,7 +74,7 @@ const Git = ({ isPushedHome, username }: GitProps): JSX.Element => {
                 className="remoteurl"
                 style={{ display: isUrlOpen ? "flex" : "none" }}
               >
-                <RemoteURL username={username} darkMode={darkMode} />
+                <RemoteURL username={username} />
               </div>
             </div>
           </div>

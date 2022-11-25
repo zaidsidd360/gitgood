@@ -1,7 +1,7 @@
 import "./App.css";
 import Home from "./pages/Home";
 import React, { useState, useEffect, useMemo, FormEvent } from "react";
-// import TerminalMobile from "./components/TerminalMobile";
+import TerminalMobile from "./components/TerminalMobile";
 import { useLockBodyScroll, useToggle } from "react-use";
 import { EyeClosedIcon, EyeIcon } from "@primer/octicons-react";
 
@@ -11,7 +11,14 @@ interface ModalProps {
   username: string,
 }
 
-const Modal = ({ setIsModalOpen, password, username }: ModalProps): JSX.Element => {
+const Modal = (props: ModalProps): JSX.Element => {
+  
+  const { 
+    setIsModalOpen, 
+    password, 
+    username 
+  } = props
+
   const [inputValue, setinputValue] = useState("");
   const [isPassWordCorrect, setIsPasswordCorrect] = useState(true);
   const [locked, setLocked] = useToggle(false);
@@ -135,7 +142,7 @@ function App(): JSX.Element {
         <code style={{ color: "green" }}>gg.resources</code> for some amazing
         git resources.
       </p>
-      {/* <TerminalMobile className="termapp" /> */}
+      <TerminalMobile className="termapp" />
       <Home
         className="homeApp"
         appCallback={appCallback}

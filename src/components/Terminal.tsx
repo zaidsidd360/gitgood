@@ -12,7 +12,14 @@ interface TerminalProps {
   username: string
 }
 
-const Terminal = ({ callback, setIsModalOpen, username }: TerminalProps): JSX.Element => {
+const Terminal = (props: TerminalProps): JSX.Element => {
+  
+  const { 
+    callback, 
+    setIsModalOpen, 
+    username 
+  } = props;
+
   const { darkMode, setDarkMode } = useContext(DarkContext);
 
   const [isPushed, setIsPushed] = useState(false);
@@ -26,6 +33,7 @@ const Terminal = ({ callback, setIsModalOpen, username }: TerminalProps): JSX.El
   let lastItem = currentDirArr[currentDirArr.length - 1];
 
   let gitCmd = "";
+
 
   useEffect(() => {
     callback(isPushed);
