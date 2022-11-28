@@ -4,7 +4,7 @@
 <p><strong>Note:</strong> Noticable frame drops on Brave(snap) for linux. <strong>Use Chrome(or Firefox) for the best experience.</strong></p>
 <h3>Here's the <a href="https://zaidsidd360.github.io/gitgood/" target="_blank">live url.</a></h3>
 
-## Screenshot
+## Screenshots
 
 #### Dark
 
