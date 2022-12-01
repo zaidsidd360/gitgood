@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://zaidsidd360.github.io/gitgood",
   "dependencies": {
-    "@primer/octicons-react": "^17.7.0",
+    "@primer/octicons-react": "^17.9.0",
     "@splinetool/react-spline": "^2.2.3",
     "@splinetool/runtime": "^0.9.136",
     "@testing-library/jest-dom": "^5.16.4",
