@@ -16,7 +16,7 @@
 ![Light Hero](https://user-images.githubusercontent.com/87397035/186506492-3bd83fd1-c699-40af-997f-73b4802da209.png)
 ![Light Main](https://user-images.githubusercontent.com/87397035/186506497-74f51742-7504-4e03-ba31-5f4afa35442b.png)
 
-#### On completing the tutorial 
+#### After tutorial completion 
 
 ![After pushed](https://user-images.githubusercontent.com/87397035/186506473-8e68e1b2-5e6b-4990-a83a-cca109910689.png)
 
