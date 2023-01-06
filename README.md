@@ -20,7 +20,7 @@
 
 ![After pushed](https://user-images.githubusercontent.com/87397035/186506473-8e68e1b2-5e6b-4990-a83a-cca109910689.png)
 
-## Run dev server
+## Run dev env
 
 * Clone the project
 
