@@ -9,7 +9,7 @@
     "@splinetool/runtime": "^0.9.136",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
+    "@testing-library/user-event": "^14.4.3",
     "react": "^18.2.0",
     "react-dark-mode-toggle": "^0.2.0",
     "react-dom": "^18.2.0",
